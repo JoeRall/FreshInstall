@@ -21,8 +21,8 @@ Rename-Computer $computerName
 # Windows Options
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileExtensions
 Update-ExecutionPolicy Unrestricted
-Enable-MicrosoftUpdate
-Install-WindowsUpdate -acceptEula -getUpdatesFromMS
+#Enable-MicrosoftUpdate
+#Install-WindowsUpdate -acceptEula -getUpdatesFromMS
 
 #Set-TaskbarOptions -lock
 #Set-StartScreenOptions -EnableBootToDesktop -EnableDesktopBackgroundOnStart -EnableShowStartOnActiveScreen
@@ -38,7 +38,6 @@ cinst -y keepass
 cinst -y dropbox
 cinst -y paint.net
 cinst -y putty
-cinst -y SourceTree
 cinst -y sysinternals
 cinst -y WinDirStat
 cinst -y WindowsLiveWriter
