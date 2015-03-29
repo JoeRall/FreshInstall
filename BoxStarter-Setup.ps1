@@ -38,6 +38,7 @@ cinst -y keepass
 cinst -y dropbox
 cinst -y paint.net
 cinst -y putty
+cinst -y sharpkeys
 cinst -y sysinternals
 cinst -y WinDirStat
 cinst -y WindowsLiveWriter
