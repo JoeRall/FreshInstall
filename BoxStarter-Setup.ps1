@@ -1,5 +1,5 @@
-# To Run From Web:  http://boxstarter.org/package/nr/url?https://raw.githubusercontent.com/jquintus/QuintusInstall/master/BoxStarter-Setup.ps1
-# To Run From Command Line:  Install-BoxstarterPackage -DisableReboots -PackageName https://gist.githubusercontent.com/jquintus/00610923c715d9569258/raw/BoxsterSetup
+# To Run From Web:  http://boxstarter.org/package/nr/url?https://raw.githubusercontent.com/JoeRall/FreshInstall/master/BoxStarter-Setup.ps1
+# To Run From Command Line:  Install-BoxstarterPackage -DisableReboots -PackageName https://raw.githubusercontent.com/JoeRall/FreshInstall/master/BoxStarter-Setup.ps1
 # http://boxstarter.org/WebLauncher
 # References: 
 #           http://blog.zerosharp.com/provisioning-a-new-development-machine-with-boxstarter/
@@ -11,7 +11,7 @@ $Boxstarter.NoPassword=$false # Is this a machine with no login password?
 $Boxstarter.AutoLogin=$true # Save my password securely and auto-login after a reboot
 
 # Set the computer name
-$defaultComputerName = "Acer-S7"
+$defaultComputerName = "MasterPC"
 $computerName = Read-Host -Prompt "Please Enter the computer name [$defaultComputerName]"
 if ($computerName -eq '') { $computerName = $defaultComputerName}
 
@@ -19,83 +19,34 @@ Write-Output "Setting computer name to $computerName"
 Rename-Computer $computerName
 
 # Windows Options
-Set-TaskbarOptions -lock
-Set-StartScreenOptions -EnableBootToDesktop -EnableDesktopBackgroundOnStart -EnableShowStartOnActiveScreen
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileExtensions
-Enable-RemoteDesktop
 Update-ExecutionPolicy Unrestricted
 Enable-MicrosoftUpdate
 Install-WindowsUpdate -acceptEula -getUpdatesFromMS
 
+#Set-TaskbarOptions -lock
+#Set-StartScreenOptions -EnableBootToDesktop -EnableDesktopBackgroundOnStart -EnableShowStartOnActiveScreen
+#Enable-RemoteDesktop
 
-# Must Have Toys
-cinst -y GoogleChrome
-cinst -y KickAssVim
-cinst -y Firefox
-cinst -y greenshot # Keep this before Dropbox to make sure we get the print screen hooks registered
-cinst -y keepass
-cinst -y cmder.portable
-# cinst -y jquintus.ConEmuConfig #TO DO:  Make this work
 
-# Big Toys
-#cinst -y VisualStudio2013Ultimate Blend SQL Win8SDK WindowsPhone80 WebTools
-#cinst -y xamarin-visualstudio
-#cinst -y visualstudio2013-webessentials.vsix
-#Install-ChocolateyVsixPackage CodeMaid http://visualstudiogallery.msdn.microsoft.com/76293c4d-8c16-4f4a-aee6-21f83a571496/file/9356/28/CodeMaid_v0.7.4.vsix
-#Install-ChocolateyVsixPackage NunitTestAdapter http://visualstudiogallery.msdn.microsoft.com/6ab922d0-21c0-4f06-ab5f-4ecd1fe7175d/file/66177/15/NUnitVisualStudioTestAdapter-1.2.vsix
-#Install-ChocolateyVsixPackage ProductifyPowerTools2013 http://visualstudiogallery.msdn.microsoft.com/dbcb8670-889e-4a54-a226-a48a15e4cace/file/117115/4/ProPowerTools.vsix
-#Install-ChocolateyVsixPackage SlowCheetahXml http://visualstudiogallery.msdn.microsoft.com/69023d00-a4f9-4a34-a6cd-7e854ba318b5/file/55948/26/SlowCheetah.vsix
-#Install-ChocolateyVsixPackage vsspellchecker http://visualstudiogallery.msdn.microsoft.com/a23de100-31a1-405c-b4b7-d6be40c3dfff/file/104494/5/VSSpellCheckerPackage.vsix
-#Install-ChocolateyVsixPackage VSCommandsForVisualStudio http://visualstudiogallery.msdn.microsoft.com/c6d1c265-7007-405c-a68b-5606af238ece/file/106247/18/SquaredInfinity.VSCommands.VS12.vsix
-
-# Less Important Toys
-cinst -y fiddler4
+# Applications (Alphabetical)
 cinst -y 7zip.install
-cinst -y sysinternals
-cinst -y ditto
+cinst -y fiddler4
 cinst -y filezilla
-
-cinst -y binroot
-
-cinst -y winmerge
-cinst -y mpc-hc
+cinst -y GoogleChrome
+cinst -y keepass
 cinst -y dropbox
-cinst -y git
+cinst -y paint.net
 cinst -y putty
-cinst -y autohotkey.portable
-cinst -y calibre
-
-cinst -y boxstarter.chocolatey
-cinst -y MicrosoftSecurityEssentials
+cinst -y SourceTree
+cinst -y sysinternals
 cinst -y WinDirStat
 cinst -y WindowsLiveWriter
-cinst -y SourceTree
-cinst -y autohotkey
-
-cinst -y GnuWin
-cinst -y nodejs.install
-cinst -y npm
-cinst -y mongodb
-
-#Less important things near the bottom
-cinst -y spotify
-cinst -y picasa
-cinst -y dependencywalker
-cinst -y paint.net
-cinst -y ScriptCs
-cinst -y winmerge
-cinst -y windowslivewriter
-
-
-#Bigger things towards the end
-#cinst -y AndroidStudio # I could never get this app to work
-#cinst -y genymotion
-
+cinst -y vlc
 
 # Blocking Installers (keep these last)
 cinst -y trillian
-cinst -y markdownpad2
-cinst -y truecrypt
+
 
 
 # 7zip 9.22.01.20130618

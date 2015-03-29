@@ -4,27 +4,11 @@
 $Boxstarter.NoPassword=$false # Is this a machine with no login password?
 $Boxstarter.AutoLogin=$true # Save my password securely and auto-login after a reboot
 
-# Windows Options
-Set-TaskbarOptions -lock
-Set-StartScreenOptions -EnableBootToDesktop -EnableDesktopBackgroundOnStart -EnableShowStartOnActiveScreen
-Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileExtensions
-Enable-RemoteDesktop
+# Visual Studio
+#cinst -y VisualStudio2013Ultimate Blend SQL Win8SDK WindowsPhone80 WebTools
+#cinst -y xamarin-visualstudio
+#cinst -y visualstudio2013-webessentials.vsix
 
-# Must Have Toys
-cinst -y KickAssVim
-cinst -y greenshot # Keep this before Dropbox to make sure we get the print screen hooks registered
-cinst -y keepass
-cinst -y cmder.portable
-
-# Less Important Toys
-cinst -y 7zip.install
-cinst -y sysinternals
-cinst -y binroot
-cinst -y winmerge
-cinst -y dropbox
-cinst -y git
-cinst -y SourceTree
-cinst -y GnuWin
-cinst -y spotify
-cinst -y paint.net
-cinst -y markdownpad2
+#VS Extensions
+Install-ChocolateyVsixPackage GlobalZoomLevel https://visualstudiogallery.msdn.microsoft.com/59260ee8-5e2d-4ca7-8dc5-4efcf7b61a81/file/130525/2/GlobalZoomLevel.vsix
+Install-ChocolateyVsixPackage WebEssentials2013Update4 https://visualstudiogallery.msdn.microsoft.com/56633663-6799-41d7-9df7-0f2a504ca361/file/105627/44/WebEssentials2013.vsix
