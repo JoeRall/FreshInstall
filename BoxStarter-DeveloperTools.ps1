@@ -15,6 +15,7 @@ if ($installVS -eq '') { cinst -y VisualStudio2013Ultimate Blend SQL Win8SDK Win
 Install-ChocolateyVsixPackage GlobalZoomLevel https://visualstudiogallery.msdn.microsoft.com/59260ee8-5e2d-4ca7-8dc5-4efcf7b61a81/file/130525/2/GlobalZoomLevel.vsix
 Install-ChocolateyVsixPackage WebEssentials2013Update4 https://visualstudiogallery.msdn.microsoft.com/56633663-6799-41d7-9df7-0f2a504ca361/file/105627/44/WebEssentials2013.vsix
 Install-ChocolateyVsixPackage NUnitTestAdapater https://visualstudiogallery.msdn.microsoft.com/6ab922d0-21c0-4f06-ab5f-4ecd1fe7175d/file/66177/15/NUnitVisualStudioTestAdapter-1.2.vsix
+Install-ChocolateyVsixPackage OpenInExternalBrowser https://visualstudiogallery.msdn.microsoft.com/46c0c49e-f825-454b-9f6a-48b216797eb5/file/136677/1/Tvl.VisualStudio.OpenInExternalBrowser.vsix
 
 
 #Git
