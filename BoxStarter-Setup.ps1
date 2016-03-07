@@ -31,7 +31,7 @@ Update-ExecutionPolicy Unrestricted
 
 # Applications (Alphabetical)
 cinst -y 7zip.install
-cinst -y fiddler4
+inst -y fiddler4
 cinst -y filezilla
 cinst -y GoogleChrome
 cinst -y keepass
@@ -41,11 +41,11 @@ cinst -y putty
 cinst -y sharpkeys
 cinst -y sysinternals
 cinst -y WinDirStat
-cinst -y WindowsLiveWriter
+#cinst -y WindowsLiveWriter
 cinst -y vlc
 
 # Blocking Installers (keep these last)
-cinst -y trillian
+#cinst -y trillian
 
 
 
