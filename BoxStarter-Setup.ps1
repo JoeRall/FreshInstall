@@ -31,11 +31,14 @@ Update-ExecutionPolicy Unrestricted
 
 # Applications (Alphabetical)
 cinst -y 7zip.install
-inst -y fiddler4
+cinst -y chocolatey
+cinst -y dropbox
+cinst -y fiddler4
 cinst -y filezilla
 cinst -y GoogleChrome
 cinst -y keepass
 cinst -y dropbox
+cinst -y devbox-notepad2
 cinst -y paint.net
 cinst -y putty
 cinst -y sharpkeys
